@@ -10,11 +10,13 @@ class MyApp extends StatelessWidget
   {
     return MaterialApp
     (
+      debugShowCheckedModeBanner: false,
       title: 'Home',
       home: Scaffold
       (
         appBar: AppBar
         (
+          leading: new IconButton(icon: new Icon(Icons.arrow_back_ios, color: Colors.blue),onPressed: () => Navigator.of(context).pop()),
           iconTheme: const IconThemeData(color: Colors.green),
           centerTitle: true,
           title: appBar(context),

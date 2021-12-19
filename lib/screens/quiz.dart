@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:home/screens/Home_Screen.dart';
+import 'package:home/screens/score.dart';
 import 'package:home/widgets/widgets.dart';
 
 class QuizScreen extends StatelessWidget
@@ -11,6 +13,7 @@ class QuizScreen extends StatelessWidget
     (
       appBar: AppBar
       (
+        leading: new IconButton(icon: new Icon(Icons.arrow_back_ios, color: Colors.blue),onPressed: () => Navigator.of(context).pop()),
         iconTheme: const IconThemeData(color: Colors.blue),
         centerTitle: true,
         title: appBar(context),
@@ -52,16 +55,20 @@ class QuizScreen extends StatelessWidget
                 ),
 
                 const SizedBox(width: 10),
-                ElevatedButton
+                GestureDetector
                 (
-                  style: ElevatedButton.styleFrom
+                  onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context) => const Home_Screen() ));},
+                  child: ElevatedButton
                   (
-                    padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 50),
-                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30))
+                    style: ElevatedButton.styleFrom
+                    (
+                      padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 50),
+                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30))
+                    ),
+                  
+                    child: const Text('Python',style: TextStyle(fontSize: 24)),
+                    onPressed: () {},
                   ),
-                
-                  child: const Text('Python',style: TextStyle(fontSize: 24)),
-                  onPressed: () {},
                 )
               ]
             ),
