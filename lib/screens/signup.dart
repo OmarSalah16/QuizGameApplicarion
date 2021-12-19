@@ -20,6 +20,7 @@ class _SignUpState extends State<SignUp> {
     (
       appBar: AppBar
       (
+        centerTitle: true,
         title: appBar(context),
         backgroundColor: Colors.transparent,
         elevation: 0.0,

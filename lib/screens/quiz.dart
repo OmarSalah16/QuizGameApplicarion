@@ -11,6 +11,8 @@ class QuizScreen extends StatelessWidget
     (
       appBar: AppBar
       (
+        iconTheme: const IconThemeData(color: Colors.blue),
+        centerTitle: true,
         title: appBar(context),
         backgroundColor: Colors.transparent,
         elevation: 0.0,
@@ -22,6 +24,8 @@ class QuizScreen extends StatelessWidget
         (
           children:
           [
+            const SizedBox(height: 20),
+
             const Text
             (
               "What's the most efficient programming language?",

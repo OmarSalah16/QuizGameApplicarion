@@ -15,6 +15,8 @@ class MyApp extends StatelessWidget
       (
         appBar: AppBar
         (
+          iconTheme: const IconThemeData(color: Colors.green),
+          centerTitle: true,
           title: appBar(context),
           backgroundColor: Colors.transparent,
           elevation: 0.0,

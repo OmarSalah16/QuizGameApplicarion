@@ -20,6 +20,8 @@ class Home_Screen extends StatelessWidget
     (
       appBar: AppBar
       (
+        iconTheme: const IconThemeData(color: Colors.blue),
+        centerTitle: true,
         title: appBar(context),
         backgroundColor: Colors.transparent,
         elevation: 0.0,
