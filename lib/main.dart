@@ -13,6 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
         create: (context) => QuizProviders(),
-        child: const MaterialApp(home: Home_Screen()));
+        child: const MaterialApp(
+            debugShowCheckedModeBanner: false, home: Home_Screen()));
   }
 }
