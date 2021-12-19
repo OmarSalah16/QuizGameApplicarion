@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:home/screens/Home_Screen.dart';
+import 'package:home/screens/signin.dart';
 import 'package:provider/provider.dart';
 import 'package:home/models/QuizProvider.dart';
 
@@ -8,12 +8,18 @@ void main() {
 }
 
 // ignore: camel_case_types
-class MyApp extends StatelessWidget {
+class MyApp extends StatelessWidget
+{
   @override
-  Widget build(BuildContext context) {
-    return ChangeNotifierProvider(
+  Widget build(BuildContext context)
+  {
+    return ChangeNotifierProvider
+    (
         create: (context) => QuizProviders(),
-        child: const MaterialApp(
-            debugShowCheckedModeBanner: false, home: Home_Screen()));
+        child: const MaterialApp
+        (
+          debugShowCheckedModeBanner: false, home: SignIn()
+        )
+    );
   }
 }
