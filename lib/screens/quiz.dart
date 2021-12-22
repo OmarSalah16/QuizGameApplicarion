@@ -67,7 +67,7 @@ class QuizScreen extends StatelessWidget
                     ),
                   
                     child: const Text('Python',style: TextStyle(fontSize: 24)),
-                    onPressed: () {},
+                    onPressed: () {Navigator.push(context,MaterialPageRoute(builder: (context) => const Score()));},
                   ),
                 )
               ]
